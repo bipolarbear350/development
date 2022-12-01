@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background: beige;
 }
 
 .App-logo {
@@ -28,6 +29,21 @@
   color: #61dafb;
 }
 
+.App-header {
+  margin: 2em;
+}
+
+.HeaderTitle {
+  background: azure;
+  padding: 2em;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.mainOptions {
+  align-self: center;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +52,5 @@
     transform: rotate(360deg);
   }
 }
+
+
