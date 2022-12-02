@@ -10,6 +10,8 @@ import {blue, red} from "@mui/material/colors";
 import Checkbox from '@mui/material/Checkbox';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import Button from '@mui/material/Button';
+
 
 
 bakeryData.forEach((item) => {
@@ -78,6 +80,11 @@ function App() {
         setHowLong(howLongToMake + input)
     }
 
+    function clearCart() {
+        setCartList([])
+        setHowLong(0)
+    }
+
   return (
     <div className="App">
       <header className={"HeaderTitle"}>My Recipe Catalog</header>
@@ -98,6 +105,7 @@ function App() {
 
       <div>
         <h2>Your Current plan</h2>
+          <Button onClick={() =>clearCart()} variant="outlined">Clear Plan</Button>
           <Grid container justifyContent={"center"}>
               {cartList.map((item, index) => (
                   <CartRecipe item={item} itemFromCart={removeFromCart} glutenTag={glutenChecked}
