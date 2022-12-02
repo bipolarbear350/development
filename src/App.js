@@ -105,8 +105,8 @@ function App() {
               ))}
           </Grid>
       </div>
-        <p>This plan will take about {howLongToMake} minutes to make</p>
-        <p>Good Luck!</p>
+        <p>This plan will take about {howLongToMake} minutes of active cooking to make</p>
+        <p>Plan accordingly, and good luck!</p>
     </div>
   );
 }
