@@ -9,7 +9,8 @@
     "vegan": false,
     "image": "images/img.png",
     "alt": "a winter roll cake",
-    "link": "https://sugargeekshow.com/recipe/pattern-roll-cake-recipe/"
+    "link": "https://sugargeekshow.com/recipe/pattern-roll-cake-recipe/",
+    "activeCookingTime": 30
   },
   {
     "name": "Roasted Broccoli",
@@ -21,7 +22,8 @@
     "vegan": true,
     "image": "images/img_1.png",
     "alt": "some yummy broccoli",
-    "link": "https://www.recipetineats.com/magic-broccoli/"
+    "link": "https://www.recipetineats.com/magic-broccoli/",
+    "activeCookingTime": 5
   },
   {
     "name": "Shrimp Scampi",
@@ -33,7 +35,8 @@
     "vegan": false,
     "image": "images/img_2.png",
     "alt": "shrimp in pasta",
-    "link": "https://www.spendwithpennies.com/easy-shrimp-scampi-recipe/"
+    "link": "https://www.spendwithpennies.com/easy-shrimp-scampi-recipe/",
+    "activeCookingTime": 15
   },
   {
     "name": "Chicken Piccata",
@@ -45,7 +48,8 @@
     "vegan": false,
     "image": "images/img_3.png",
     "alt": "some chicken piccata in a pan",
-    "link": "https://www.spendwithpennies.com/chicken-piccata/"
+    "link": "https://www.spendwithpennies.com/chicken-piccata/",
+    "activeCookingTime": 25
   },
   {
     "name": "Lentil Bolognese",
@@ -57,7 +61,8 @@
     "vegan": true,
     "image": "images/img_4.png",
     "alt": "some lentil bolognese",
-    "link": "https://www.feastingathome.com/lentil-bolognese/#tasty-recipes-47267-jump-target"
+    "link": "https://www.feastingathome.com/lentil-bolognese/#tasty-recipes-47267-jump-target",
+    "activeCookingTime": 20
   },
   {
     "name": "Coconut Rice Bowl",
@@ -69,7 +74,8 @@
     "vegan": true,
     "image": "images/img_5.png",
     "alt": "a coconut rice dish",
-    "link": "https://www.feastingathome.com/coconut-rice/"
+    "link": "https://www.feastingathome.com/coconut-rice/",
+    "activeCookingTime": 40
   },
   {
     "name": "Vegetable Stir Fry",
@@ -81,7 +87,8 @@
     "vegan": true,
     "image": "images/img_6.png",
     "alt": "a tasty looking stir fry",
-    "link": "https://deliciouslittlebites.com/vegetable-stir-fry/"
+    "link": "https://deliciouslittlebites.com/vegetable-stir-fry/",
+    "activeCookingTime": 30
   },
   {
     "name": "Spiced Grilled Chicken Breast",
@@ -93,7 +100,8 @@
     "vegan": false,
     "image": "images/img_7.png",
     "alt": "some grilled chicken",
-    "link": "https://easychickenrecipes.com/grilled-chicken-breast-recipe/"
+    "link": "https://easychickenrecipes.com/grilled-chicken-breast-recipe/",
+    "activeCookingTime": 20
   },
   {
     "name": "Authentic Italian Tiramisu",
@@ -105,7 +113,8 @@
     "vegan": false,
     "image": "images/img_8.png",
     "alt": "a slice of tiramisu",
-    "link": "https://www.alsothecrumbsplease.com/authentic-italian-tiramisu/"
+    "link": "https://www.alsothecrumbsplease.com/authentic-italian-tiramisu/",
+    "activeCookingTime": 20
   },
   {
     "name": "Pork Loin Roast",
@@ -117,7 +126,8 @@
     "vegan": false,
     "image": "images/img_9.png",
     "alt": "slices of pork",
-    "link": "https://cafedelites.com/pork-loin-recipe/"
+    "link": "https://cafedelites.com/pork-loin-recipe/",
+    "activeCookingTime": 10
   },
   {
     "name": "Quinoa Cakes",
@@ -129,7 +139,8 @@
     "vegan": true,
     "image": "images/img_10.png",
     "alt": "some cakes stacked with relish",
-    "link": "https://www.feastingathome.com/quinoa-cakes-with-cherry-tomato-mint-and-chick-pea-relish/"
+    "link": "https://www.feastingathome.com/quinoa-cakes-with-cherry-tomato-mint-and-chick-pea-relish/",
+    "activeCookingTime": 75
   },
   {
     "name": "Almond Cookies",
@@ -141,6 +152,7 @@
     "vegan": true,
     "image": "images/img_11.png",
     "alt": "some almond cookies stacked",
-    "link": "https://www.powerhungry.com/2018/03/3-ingredient-almond-flour-cookies-vegan-grain-free-paleo/"
+    "link": "https://www.powerhungry.com/2018/03/3-ingredient-almond-flour-cookies-vegan-grain-free-paleo/",
+    "activeCookingTime": 5
   }
 ]

@@ -3,6 +3,7 @@ import './App.css';
 import { useState } from "react";
 import bakeryData from "./data/bakery-data.json";
 import {BakeryItem} from "./components/BakeryItem";
+import {CartRecipe} from "./components/CartRecipe";
 import {Grid} from "@mui/material";
 import {Container} from "@mui/material";
 import {blue, red} from "@mui/material/colors";
@@ -15,17 +16,28 @@ bakeryData.forEach((item) => {
   item.image = process.env.PUBLIC_URL + "/" + item.image;
 });
 
+bakeryData.sort(function (a, b) {
+    if (a.name < b.name) {
+        return -1;
+    } else {return 1}});
+
 function App() {
 
-  const [finalPrice, setFinalprice] = useState(0);
-  function handlePriceClick(input){
-    setFinalprice(finalPrice + input)
-  }
 
-  const [cartList, setCartList] = useState([]);
-  function addToCart(input1, input2) {
-    setCartList(cartList.concat(input1))
-    handlePriceClick(input2)
+  let [cartList, setCartList] = useState([]);
+  function addToCart(input1) {
+      if (!cartList.includes(input1)) {
+          setCartList(cartList.concat(input1))
+          updateCookingTime(input1.activeCookingTime)
+      }
+
+  }
+    function removeFromCart(input1) {
+        if (cartList.includes(input1)) {
+            setCartList(cartList.filter(item => item !== input1))
+            updateCookingTime(0 - input1.activeCookingTime)
+        }
+
   }
 
   const [glutenChecked, setGlutenChecked] = useState(false);
@@ -47,12 +59,24 @@ function App() {
     }
 
     const [timeChecked, setTimeChecked] = useState(false);
-    function checkTime(input) {
-        if (timeChecked){setTimeChecked(false)}
-        else{setTimeChecked(true)}
+    function checkTime() {
+        if (timeChecked){
+            bakeryData.sort(function (a, b) {
+                if (a.name < b.name) {
+                    return -1;
+                } else {return 1}});
+            setTimeChecked(false)
+        }
+        else{
+            bakeryData.sort(function(a,b){return a.time - b.time})
+            setTimeChecked(true)
+        }
     }
 
-
+    const [howLongToMake, setHowLong] = useState(0);
+    function updateCookingTime(input) {
+        setHowLong(howLongToMake + input)
+    }
 
   return (
     <div className="App">
@@ -61,6 +85,9 @@ function App() {
             <FormControlLabel control={<Checkbox onChange={checkGluten}/>} label="Gluten-free" />
             <FormControlLabel control={<Checkbox onChange={checkVegetarian} />} label="Vegetarian" />
             <FormControlLabel control={<Checkbox onChange={checkVegan} />} label="Vegan" />
+        </FormGroup>
+        <FormGroup className={'mainOptions'}>
+            <FormControlLabel control={<Checkbox onChange={checkTime} />} label="Sort by time" />
         </FormGroup>
       <Grid container justifyContent={"center"}>
       {bakeryData.map((item, index) => ( // TODO: map bakeryData to BakeryItem components
@@ -71,13 +98,15 @@ function App() {
 
       <div>
         <h2>Your Current plan</h2>
-        {/* TODO: render a list of items in the cart */}
-          <p>Appetizers</p>
-          <Grid container></Grid>
-          <p>Main Course</p>
-        <p>Items: {cartList}</p>
-        <p>Total price: {finalPrice}</p>
+          <Grid container justifyContent={"center"}>
+              {cartList.map((item, index) => (
+                  <CartRecipe item={item} itemFromCart={removeFromCart} glutenTag={glutenChecked}
+                              vegTag={vegetarianChecked} veganTag={veganChecked}/>
+              ))}
+          </Grid>
       </div>
+        <p>This plan will take about {howLongToMake} minutes to make</p>
+        <p>Good Luck!</p>
     </div>
   );
 }

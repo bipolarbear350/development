@@ -64,42 +64,6 @@ export function BakeryItem({item, itemToCart, glutenTag, vegTag, veganTag}) {
         return(createCard());
     }
 
-
-
-    // switch (status)
-    // {
-    //     case (true, true, true):
-    //         if (gluStatus && vegStatus && veganStatus)
-    //         return(createCard());
-    //         break;
-    //     case (true, true, false):
-    //         if (gluStatus && vegStatus)
-    //             return(createCard());
-    //         break;
-    //     case (true, false, true):
-    //         if (gluStatus && veganStatus)
-    //             return(createCard());
-    //         break;
-    //     case (false, true, true):
-    //         if (vegStatus && veganStatus)
-    //             return(createCard());
-    //         break;
-    //     case (true, false, false):
-    //         if (gluStatus)
-    //             return(createCard());
-    //         break;
-    //     case (false, true, false):
-    //         if (vegStatus)
-    //             return(createCard());
-    //         break;
-    //     case (false, false, true):
-    //         if (veganStatus)
-    //             return(createCard());
-    //         break;
-    //     case (status):
-    //             return(createCard());
-    // }
-
     function testAppend() {
         let labelList = "-"
         if (gluStatus) {labelList = labelList.concat("- Gluten-free -")}
@@ -138,7 +102,7 @@ export function BakeryItem({item, itemToCart, glutenTag, vegTag, veganTag}) {
                     </CardContent>
                 </CardActionArea>
                 <CardContent>
-                    <Button variant="outlined">Add/Remove From Plan</Button>
+                    <Button onClick={() =>itemToCart(item)} variant="outlined">Add To Plan</Button>
                 </CardContent>
             </Card>
         );
